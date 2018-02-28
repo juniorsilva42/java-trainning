@@ -91,4 +91,16 @@ public class Lista {
         }
         return "";
     }
+
+    /*
+     *
+     * Faz um range de posições q não podem ser acessadas
+     *
+     */
+    public boolean verificaPosicao (int posicao){
+        if (!(posicao >= 0 && posicao < tamanho)){
+            return false;
+        }
+        return true;
+    }
 }
