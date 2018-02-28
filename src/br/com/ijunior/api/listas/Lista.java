@@ -72,4 +72,23 @@ public class Lista {
 
         return this.lista[posicao];
     }
+
+    /*
+     *
+     * Busca um elemento e seu índice
+     *
+     */
+    public String buscaCompleta (int posicao) {
+
+        // Nega a existência da posição na Lista.
+        if(!verificaPosicao(posicao))
+            throw new IllegalArgumentException("Posição inválida");
+
+        for (int i = 0; i < this.tamanho; ++i){
+            if (this.lista[posicao] == this.lista[i]){
+                return "Elemento: "+this.lista[posicao]+"\nÍndice: "+i;
+            }
+        }
+        return "";
+    }
 }
