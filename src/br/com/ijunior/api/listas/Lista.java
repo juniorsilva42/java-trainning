@@ -58,4 +58,18 @@ public class Lista {
         }
         this.tamanho--;
     }
+
+    /*
+     *
+     * Busca um elemento pelo índice
+     *
+     */
+    public String buscaPeloIndice (int posicao) {
+
+        // Nega a existência da posição na Lista.
+        if(!verificaPosicao(posicao))
+            throw new IllegalArgumentException("Posição inválida");
+
+        return this.lista[posicao];
+    }
 }
