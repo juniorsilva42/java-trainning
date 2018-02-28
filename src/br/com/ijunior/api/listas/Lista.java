@@ -6,8 +6,8 @@ public class Lista {
     private int tamanho;
 
     /*
-     *
      * Inicializa a classe
+     * @constructor
      * @arguments {capacidade} - capacidade da lista
      *
      */
