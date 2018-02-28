@@ -75,21 +75,29 @@ public class Lista {
 
     /*
      *
-     * Busca um elemento e seu índice
+     * Procedimento que busca um elemento e seu índice
      *
      */
-    public String buscaCompleta (int posicao) {
+    public void buscaCompleta (int posicao) {
 
         // Nega a existência da posição na Lista.
         if(!verificaPosicao(posicao))
             throw new IllegalArgumentException("Posição inválida");
 
+        /*
+          * Percorre a lista buscando uma igualdade entre a posição passada
+          * no argumento e o índice corrente dentro da repetição.
+          *
+          * Quando na primeira execução o retorno for verdadeiro, breca o laço,
+          * pois não há mais o porquê de percorrer a lista.
+          *
+        */
         for (int i = 0; i < this.tamanho; ++i){
             if (this.lista[posicao] == this.lista[i]){
-                return "Elemento: "+this.lista[posicao]+"\nÍndice: "+i;
+                System.out.println("Elemento: "+this.lista[posicao]+"\nÍndice: "+i);
+                break;
             }
         }
-        return "";
     }
 
     /*

@@ -26,8 +26,7 @@ public class ListaDeCarrosTestes {
 
         /*
          *
-         * Exibe novamente o elemento do índice 2. Porém, note que agora não é mais "Toyota Corolla", e sim o
-         * seu sucessor que foi para o seu lugar, neste caso, o elemento "Hyundai H20s".
+         * Exibe novamente o elemento do índice 2. Porém, note que agora não é mais "Toyota Corolla", e sim o seu sucessor que foi para o seu lugar, neste caso, o elemento "Hyundai H20s".
          */
         System.out.println("\nBUSCA 2: "+lista.buscaPeloIndice(2));
 
@@ -36,6 +35,7 @@ public class ListaDeCarrosTestes {
          * Após o delete do índice 2, a lista toda se move à esquerda.
          * Logo, o novo índice 3 é formado pelo elemento "Celta", o que antes era o "Hyundai H20s".
          */
-        System.out.println("\nBUSCA 3:\n"+lista.buscaCompleta(3));
+        System.out.println("\nBUSCA 3: ");
+        lista.buscaCompleta(3);
     }
 }
