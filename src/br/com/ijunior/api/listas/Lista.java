@@ -37,4 +37,25 @@ public class Lista {
         }
         return false;
     }
+
+    /*
+     *
+     * Remove um elemento da lista
+     *
+     */
+    public void delete(int posicao){
+        /*
+         *
+         * Nega a existência da posição na Lista.
+         * Uma pequena gambiarra para não aninhar expressões if e else
+         *
+         */
+        if(!verificaPosicao(posicao))
+            throw new IllegalArgumentException("Posição inválida");
+
+        for (int i = posicao; i < this.tamanho-1; ++i){
+            this.lista[i] = this.lista[i+1];
+        }
+        this.tamanho--;
+    }
 }
