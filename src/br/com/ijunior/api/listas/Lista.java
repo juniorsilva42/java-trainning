@@ -97,10 +97,19 @@ public class Lista {
      * Faz um range de posições q não podem ser acessadas
      *
      */
-    public boolean verificaPosicao (int posicao){
-        if (!(posicao >= 0 && posicao < tamanho)){
+    public boolean verificaPosicao (int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             return false;
         }
         return true;
+    }
+
+    /*
+     *
+     * Retorna o tamanho da lista
+     *
+     */
+    public int obtemTamanho() {
+        return this.tamanho;
     }
 }
